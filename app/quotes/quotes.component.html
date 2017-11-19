@@ -1,0 +1,26 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            Quotes
+        </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <mat-table #table [dataSource]="quotes">
+            <!-- Text Column -->
+            <ng-container matColumnDef="text">
+                <mat-header-cell *matHeaderCellDef>Text</mat-header-cell>
+                <mat-cell *matCellDef="let quote">{{ quote.text }}</mat-cell>
+            </ng-container>
+
+            <!-- Author Column -->
+            <ng-container matColumnDef="author">
+                <mat-header-cell *matHeaderCellDef>Author</mat-header-cell>
+                <mat-cell *matCellDef="let quote">{{quote.author }}</mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+    </mat-card-content>
+</mat-card>

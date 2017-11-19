@@ -1,0 +1,7 @@
+mat-card:first-child {
+    margin-bottom: 1em;
+}
+
+mat-card-title {
+    font-size: 2em !important;
+}

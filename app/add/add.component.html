@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>
+    New quote
+</h1>
+
+<mat-dialog-content>
+    <form>
+        <mat-form-field>
+            <input matInput type="text" required placeholder="Text" #text />
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput type="text" required placeholder="Firstname" #firstname />
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput type="text" required placeholder="Lastname" #lastname />
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="onAdd(text.value, firstname.value, lastname.value)">
+        Add
+    </button>
+
+    <button mat-raised-button mat-dialog-close color="warn">
+        No
+    </button>
+</mat-dialog-actions>
