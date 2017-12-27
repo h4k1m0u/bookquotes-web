@@ -9,23 +9,11 @@
 
     <nav>
         <mat-menu #appMenu="matMenu">
-            <button mat-menu-item *ngIf="!isLogged" routerLink="/quotes/login">
-                <mat-icon>person</mat-icon> Login
-            </button>
-            <button mat-menu-item *ngIf="!isLogged" routerLink="/quotes/register">
-                <mat-icon>person_add</mat-icon> Register
-            </button>
             <button mat-menu-item *ngIf="isLogged" routerLink="/quotes/list">
                 <mat-icon>format_quote</mat-icon> Quotes
             </button>
-            <button mat-menu-item *ngIf="isLogged" (click)="openDialog()">
-                <mat-icon>add</mat-icon> Add
-            </button>
-            <button mat-menu-item *ngIf="isLogged" routerLink="/quotes/logout">
-                <mat-icon>person_outline</mat-icon> Logout (<app-user></app-user>)
-            </button>
 
-            <a mat-menu-item href="http://bookquotes.me/expenses/" target="_blank">
+            <a mat-menu-item href="http://gistutorials.loc/expenses/" target="_blank">
                 <mat-icon>shopping_cart</mat-icon> Expenses
             </a>
         </mat-menu>

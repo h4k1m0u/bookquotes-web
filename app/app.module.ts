@@ -15,31 +15,17 @@ import { MatChipsModule } from '@angular/material/chips';
 // import components
 import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/quotes.component';
-import { LoginComponent } from './login/login.component';
-import { LogoutComponent } from './logout/logout.component';
-import { RegisterComponent } from './register/register.component';
-import { UserComponent } from './user/user.component';
-import { AddComponent } from './add/add.component';
 
 // import ngModel
 import { FormsModule } from '@angular/forms';
 // import http
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
-// import custom http interceptor
-import { LoginInterceptor } from './login/login.interceptor';
-import { AuthService } from './services/auth.service';
-import { AddService } from './services/add.service';
-
 // import router
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-    {path: 'quotes/login', component: LoginComponent},
-    {path: 'quotes/list', component: QuotesComponent},
-    {path: 'quotes/logout', component: LogoutComponent},
-    {path: 'quotes/register', component: RegisterComponent},
-    {path: 'quotes/add', component: AddComponent}
+    {path: 'quotes', component: QuotesComponent},
 ];
 
 
@@ -47,11 +33,6 @@ const routes: Routes = [
     declarations: [
         AppComponent,
         QuotesComponent,
-        LoginComponent,
-        LogoutComponent,
-        RegisterComponent,
-        UserComponent,
-        AddComponent,
     ],
     imports: [
         BrowserModule,
@@ -73,15 +54,7 @@ const routes: Routes = [
         MatCardModule,
         MatChipsModule
     ],
-    // Import auth interceptor and services
     providers: [
-        {
-            provide: HTTP_INTERCEPTORS,
-            useClass: LoginInterceptor,
-            multi: true
-        },
-        AuthService,
-        AddService
     ],
     bootstrap: [AppComponent]
 })

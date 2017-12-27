@@ -5,7 +5,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { URL } from '../constants';
-import { AddService } from '../services/add.service';
 import { MatTableDataSource } from '@angular/material';
 
 // Success and error response interfaces
@@ -31,15 +30,10 @@ export class QuotesComponent implements OnInit {
     displayedColumns = ['text', 'author'];
 
     // inject http
-    constructor(private http: HttpClient, private add: AddService) { }
+    constructor(private http: HttpClient) { }
 
     ngOnInit() {
         this.getQuotes()
-
-        // receive boolean from add component to update quotes
-        this.add.added.subscribe((isAdded) => {
-            this.getQuotes();
-        });
     }
 
     getQuotes() {
