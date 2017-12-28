@@ -24,3 +24,15 @@
         </mat-table>
     </mat-card-content>
 </mat-card>
+
+<nav>
+    <button mat-raised-button color="primary" *ngIf="page > 1" routerLink="/quotes/{{ page - 1 }}">
+        <mat-icon>navigate_before</mat-icon>
+    </button>
+    <button mat-icon-button disabled class="spacer">
+        {{ page }}
+    </button>
+    <button mat-raised-button color="primary" *ngIf="page < numPages" routerLink="/quotes/{{ page + 1 }}">
+        <mat-icon>navigate_next</mat-icon>
+    </button>
+</nav>

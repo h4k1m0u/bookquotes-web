@@ -14,6 +14,6 @@ export class AppComponent {
 
     ngOnInit() {
         // redirect to list of quotes
-        this.router.navigateByUrl('/quotes');
+        this.router.navigateByUrl('/quotes/1');
     }
 }

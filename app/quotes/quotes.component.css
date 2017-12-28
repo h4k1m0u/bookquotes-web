@@ -5,3 +5,12 @@ mat-card:first-child {
 mat-card-title {
     font-size: 2em !important;
 }
+
+nav {
+    display: flex;
+}
+
+.spacer {
+    flex: auto;
+    text-align: center;
+}
