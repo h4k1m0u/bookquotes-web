@@ -29,9 +29,9 @@
     <button mat-raised-button color="primary" *ngIf="page > 1" routerLink="/quotes/{{ page - 1 }}">
         <mat-icon>navigate_before</mat-icon>
     </button>
-    <button mat-icon-button disabled class="spacer">
+    <span class="spacer">
         {{ page }}
-    </button>
+    </span>
     <button mat-raised-button color="primary" *ngIf="page < numPages" routerLink="/quotes/{{ page + 1 }}">
         <mat-icon>navigate_next</mat-icon>
     </button>

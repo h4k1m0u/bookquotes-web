@@ -1,3 +1,6 @@
+// import colors
+@import '~variables.scss';
+
 mat-card:first-child {
     margin-bottom: 1em;
 }
@@ -13,4 +16,5 @@ nav {
 .spacer {
     flex: auto;
     text-align: center;
+    color: $primary;
 }

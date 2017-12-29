@@ -34,3 +34,25 @@ $ ng build --prod --deploy-url=expenses
 ```
 
 And a `dist` folder will be created at the root of the project, where its static files will be served from `/expenses`.
+
+# Using SCSS instead of CSS
+
+`SCSS` is more suitable to customize the themes of `Material` than `CSS`. According to [this tutorial](https://scotch.io/tutorials/using-sass-with-the-angular-cli), to switch to `SCSS`:
+
+```sh
+$ ng set defaults.styleExt scss
+```
+
+If you get an error related to `Node-sass`, the following command might fix it:
+
+```sh
+$ npm rebuild node-sass
+```
+
+Afterwards you need to reference the correct styles file in `.angular-cli.json`:
+
+```scss
+"styles": [
+  "sass/styles.scss"
+],
+```
