@@ -25,7 +25,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-    {path: 'quotes/:page', component: QuotesComponent},
+    {path: 'bookquotes/quotes/:page', component: QuotesComponent},
 ];
 
 

@@ -26,13 +26,13 @@
 </mat-card>
 
 <nav>
-    <button mat-raised-button color="primary" *ngIf="page > 1" routerLink="/quotes/{{ page - 1 }}">
+    <button mat-raised-button color="primary" *ngIf="page > 1" routerLink="/bookquotes/quotes/{{ page - 1 }}">
         <mat-icon>navigate_before</mat-icon>
     </button>
     <span class="spacer">
         {{ page }}
     </span>
-    <button mat-raised-button color="primary" *ngIf="page < numPages" routerLink="/quotes/{{ page + 1 }}">
+    <button mat-raised-button color="primary" *ngIf="page < numPages" routerLink="/bookquotes/quotes/{{ page + 1 }}">
         <mat-icon>navigate_next</mat-icon>
     </button>
 </nav>
