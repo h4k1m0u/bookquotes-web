@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 
 @Component({
     selector: 'app-root',
@@ -10,7 +11,7 @@ export class AppComponent {
     appName = 'Bookquotes';
     
     // inject classes
-    constructor(private router: Router) { }
+    constructor(private router: Router, private googleAnalytics: Angulartics2GoogleAnalytics) { }
 
     ngOnInit() {
         // redirect to list of quotes
