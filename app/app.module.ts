@@ -19,7 +19,7 @@ import { QuotesComponent } from './quotes/quotes.component';
 // import ngModel
 import { FormsModule } from '@angular/forms';
 // import http
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 // import router
 import { RouterModule, Routes } from '@angular/router';
